@@ -9,8 +9,8 @@ var PlayerView = Backbone.View.extend({
     
   },
 
-  events: function() {
-    ended: "songEnded";
+  events: {
+    'ended': "songEnded"
   },
 
   setSong: function(song) {
@@ -22,6 +22,7 @@ var PlayerView = Backbone.View.extend({
     return this.$el.attr('src', this.model ? this.model.get('url') : '');
   },
   songEnded: function() {
+    this.$el.currentTime = 0;
     this.model.ended();
   }
 
