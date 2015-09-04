@@ -10,7 +10,7 @@ var AddPlaylistView = Backbone.View.extend({
   events: {
     'click .button': function() {
       debugger;
-      this.trigger('addPlaylist', $el.find('#PlaylistName').val());
+      this.trigger('addPlaylist', this.$el.find('#PlaylistName').val());
     }
   },
 
@@ -18,4 +18,4 @@ var AddPlaylistView = Backbone.View.extend({
     return this.$el.html("<input id='PlaylistName' type='text'><button class='button'>Submit</button>");
   }
 
-})
+});

@@ -8,7 +8,7 @@ var PlaylistView = Backbone.View.extend({
   },
 
   render: function() {
-    this.$el.children().detach();
+    // this.$el.children().detach();
 
     this.$el.html('<th>' + this.model.get('name') + '</th>').append(
       this.model.collection.map(function(song) {
