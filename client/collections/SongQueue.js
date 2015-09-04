@@ -28,6 +28,13 @@ var SongQueue = Songs.extend({
 
   dequeue: function(song) {
     this.remove(song);
+  },
+
+  enqueuePlaylist: function(playlist) {
+    this.reset();
+    playlist.each(song, function(song) {
+      this.add(song);
+    }, this);
   }
 
 });
